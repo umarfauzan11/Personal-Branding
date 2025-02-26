@@ -30,10 +30,17 @@
     display: grid;
     box-shadow: 0 0 50px black;
     transition: transform 0.7s ease; /* Animasi perubahan ukuran */
-    transform: scale(1); /* Ukuran normal */
+    transform: scale(0.9); /* Ukuran normal */
 }
 .gambar:hover{
-    transform: scale(1.5); /* Membesar saat di-hover */
+    transform: scale(1.1); /* Membesar saat di-hover */
+}
+.gambar2{
+    transition: transform 0.7s ease; /* Animasi perubahan ukuran */
+    transform: scale(0.9); /* Ukuran normal */
+}
+.gambar2:hover{
+    transform: scale(1.1); /* Membesar saat di-hover */
 }
 .teks1{
     justify-content: center;
@@ -323,4 +330,11 @@ nav a{
     padding-bottom: 55px;
     padding-left: 12px;
     padding-right: 12px;
+}
+.tulisan{
+    transition: transform 0.7s ease; /* Animasi perubahan ukuran */
+    transform: scale(0.9); /* Ukuran normal */
+}
+.tulisan:hover{
+    transform: scale(1.1); /* Membesar saat di-hover */
 }
