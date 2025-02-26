@@ -384,3 +384,50 @@ body {
         opacity: 1;
     }
 }
+.education-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1a1a1a; /* Latar belakang hitam */
+    border-radius: 10px;
+}
+
+.education-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Latar transparan */
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.edu-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.edu-text {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.image-container2{
+    perspective: 1000px; /* Kasih perspektif biar nggak kelihatan zoom-in */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.neverland {
+    width: 200px; /* Sesuaikan ukuran */
+    transition: transform 0.1s ease-out;
+    transform-style: preserve-3d;
+}
+
