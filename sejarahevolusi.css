@@ -1,0 +1,12 @@
+.gambar22 {
+    width: 400px;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+    padding-top: 63px;
+}
+.gambar23{
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, black, white);
+}
