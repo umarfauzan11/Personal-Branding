@@ -10,3 +10,42 @@
     margin: 0;
     background: linear-gradient(to bottom, black, white);
 }
+.gambar24{
+    width: 400px;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+}
+.TENGAH{
+}
+
+.revolusi-container {
+    background-color: white;
+    color: black;
+    border-radius: 32px;
+    margin-bottom: 52px;
+    text-align: center;
+}
+.gambar24 {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto 15px;
+}
+.revolusi-img {
+    max-width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.revolusi-img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 35px rgb(255, 255, 255));
+
+}
+.story {
+    color: white;
+    width: 100%;
+    text-align:center;
+    margin: 30px;
+    padding: 0 70px;
+}
