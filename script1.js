@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const x = e.clientX - left - width / 2;
         const y = e.clientY - top - height / 2;
 
-        const rotateX = (y / height) * -30;
-        const rotateY = (x / width) * 30;
+        const rotateX = (y / height) * -50;
+        const rotateY = (x / width) * 40;
 
         image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     });

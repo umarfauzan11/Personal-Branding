@@ -426,8 +426,14 @@ body {
 }
 
 .neverland {
-    width: 200px; /* Sesuaikan ukuran */
+    width: 299px; /* Sesuaikan ukuran */
     transition: transform 0.1s ease-out;
     transform-style: preserve-3d;
 }
-
+.neverland3{
+    transition: transform 0.1s ease; /* Animasi perubahan ukuran */
+    transform: scale(0.5); /* Ukuran normal */
+}
+.neverland3:hover{
+    transform: scale(1.5); /* Membesar saat di-hover */
+}
