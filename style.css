@@ -430,7 +430,7 @@ body {
     transform-style: preserve-3d;
 }
 .neverland3{
-    transition: transform 0.1s ease; /* Animasi perubahan ukuran */
+    transition: transform 0.8s ease; /* Animasi perubahan ukuran */
     transform: scale(0.5); /* Ukuran normal */
 }
 .neverland3:hover{
