@@ -440,8 +440,8 @@ body {
 
 .image-container12 {
     position: relative;
-    width: 500px; /* Sesuaikan ukuran */
-    height: 500px; /* Atur tinggi sesuai kebutuhan */
+    width: 400px; /* Sesuaikan ukuran */
+    height: 400px; /* Atur tinggi sesuai kebutuhan */
     background-image: url('backgroundofbuku.png');
     background-size: contain; /* Menyesuaikan ukuran background */
     background-position: center; /* Posisikan background di tengah */
@@ -461,4 +461,15 @@ body {
     height: auto;
 }
 
+.image-container13 {
+    position: relative;
+    width: 100px; /* Sesuaikan ukuran */
+    height: 230px; /* Atur tinggi sesuai kebutuhan */
+    background-image: url('backgroundutama.png');
+    background-size: contain; /* Menyesuaikan ukuran background */
+    background-position: center; /* Posisikan background di tengah */
+    display: grid;
+    justify-content: center; /* Pusatkan gambar cover */
+    align-items: center;
+}
 
