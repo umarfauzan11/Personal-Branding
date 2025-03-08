@@ -495,4 +495,17 @@ body {
     margin: auto;
     width: 900px;;
     padding: 0;
-    }
+}
+
+.welcomee{
+position: relative;
+width: 500px; /* Sesuaikan ukuran */
+height: 500px; /* Atur tinggi sesuai kebutuhan */
+background-image: url('gtx/Black_And_White_Aesthetic_Minimalist_Modern_Simple_Typography_Coconut_Cosmetics_Logo-removebg-preview.png');
+background-size: contain; /* Menyesuaikan ukuran background */
+background-position: center; /* Posisikan background di tengah */
+background-repeat: no-repeat;
+display: flex;
+justify-content: center; /* Pusatkan gambar cover */
+align-items: center;
+}
