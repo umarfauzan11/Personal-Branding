@@ -508,4 +508,20 @@ background-repeat: no-repeat;
 display: flex;
 justify-content: center; /* Pusatkan gambar cover */
 align-items: center;
+}   
+
+.gambar32{
+    border-radius: 1090px;
+    text-align: left;
+    margin: auto;
+    display: flex;
+    box-shadow: 0 0 50px white;
+    width: 222px;
+}
+.tulisan33{
+    border-radius: 1090px;
+    text-align: center;
+    margin: auto;
+    display: grid;
+    width: 222px;
 }
