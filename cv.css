@@ -1,0 +1,53 @@
+.body3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.card {
+    background-color: #a9a9a9;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+}
+
+.icon img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.country-code {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+.card-container {
+    max-width: 800px; /* Atur agar tidak melebar ke seluruh layar */
+    margin: auto; /* Biar tetap di tengah */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+

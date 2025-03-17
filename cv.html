@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="img/png" href="ICON/BM DU(1).png">
+    <title>Download CV Umar Fauzan Irvan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cv.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="revisi2">
+            <a href="#" class="logo" onclick="window.history.back()">↩️ Back</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="tentang.html">Tentang</a>
+        </nav>
+        </header>
+
+        <div class="container mt-3">
+            <h2>Example of Jumbotron</h2>
+            <div class="mt-4 p-4 bg-white text-white rounded">
+                <h1 style="color: black; text-align: center;">Download My CV Here</h1>
+                <p style="color: black; text-align: center;">
+                    "My CV is available in three languages."
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card-container">
+            <div class="card projek9">
+                <div class="icon">
+                    <img src="flag/jp.png" alt="Earth"/>
+                </div>
+                <h1 class="country-code">JP</h1>
+                <a href="#" class="download-button" id="downloadJP">download</a>
+            </div>
+        
+            <div class="card projek9">
+                <div class="icon">
+                    <img src="flag/idn.png" alt="Earth"/>
+                </div>
+                <h1 class="country-code">IDN</h1>
+                <a href="#" class="download-button" id="downloadIDN">download</a>
+            </div>
+        
+            <div class="card projek9">
+                <div class="icon">
+                    <img src="flag/en.png" alt="Earth"/>
+                </div>
+                <h1 class="country-code">EN</h1>
+                <a href="#" class="download-button" id="downloadEN">download</a>
+            </div>
+        </div>
+
+        
+        <script>
+        document.getElementById("downloadJP").addEventListener("click", function (event) {
+            event.preventDefault();
+            downloadFile("cv/CV_JP.pdf", "CV_Japanese.pdf");
+        });
+        
+        document.getElementById("downloadIDN").addEventListener("click", function (event) {
+            event.preventDefault();
+            downloadFile("cv/CV_IND.pdf", "CV_Indonesian.pdf");
+        });
+        
+        document.getElementById("downloadEN").addEventListener("click", function (event) {
+            event.preventDefault();
+            downloadFile("cv/CV_EN.pdf", "CV_English.pdf");
+        });
+        
+        function downloadFile(filePath, fileName) {
+            const link = document.createElement("a");
+            link.href = filePath;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        </script>
+        
+
+        <footer class="footer">
+            <p class="story">
+                © 2025 Umar F.I. – Desain eksklusif dengan sentuhan kreatif.
+            Disempurnakan pada Maret 2025 | GitHub 2025
+            Dikembangkan oleh Bmdu Studio untuk Personal Website.
+            </p>
+        </footer>
+        
+        <style>
+        /* Styling footer */
+        .footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        </style>
+        
+    </body>
+
+    
