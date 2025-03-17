@@ -3,204 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perkenalan - Umar Fauzan Irvan</title>
+    <link rel="icon" type="img/png" href="ICON/BM DU(1).png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Portofolio Umar.F.I</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-        }
-
-        .hero {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            flex-direction: column;
-        }
-
-        .hero img {
-            max-width: 100%;
-            height: auto;
-            transform: scale(1);
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            opacity: 0.8;
-        }
-
-        .content {
-            padding: 100px 10%;
-            text-align: center;
-        }
-
-        .iphone-img {
-            max-width: 50%;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .carousel img {
-            max-width: 70%;
-            height: auto;
-            border-radius: 10px;
-            margin: 0 auto;
-        }
-        .logowikrama{
-            width: 145px;
-        }
-
-        .btn-apple {
-    border-radius: 50px; /* Biar lebih bulat dan smooth */
-    padding: 12px 24px;  /* Kasih padding biar proporsional */
-    font-size: 16px;
-    font-weight: 500;
-    background-color: #0071e3; /* Warna biru khas Apple */
-    color: white;
-    border: none;
-    transition: all 0.3s ease-in-out;
-    }
-
-    .btn-apple:hover {
-    background-color: #005bb5; /* Warna lebih gelap saat hover */
-    }
-    .kecil{
-        font-size: 2px;
-    }
-    </style>
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
 </head>
 <body>
+    <body>
 
     <header class="revisi2">
         <a href="#" class="logo">Portofolio</a>
     <nav class="navbar">
-        <a href="tentang.html">Home</a>
+        <a href="index.html">Home</a>
+        <a href="tentang.html">Tentang</a>
         <a href="projek.html">Projek</a>
         <a href="mygames.html">My Game Project</a>
     </nav>
 </header>
-    
-    <section class="hero">
-        <!-- <img src="utama.png"iphone-img" alt="iPhone 16 Style"> -->
-        <p class="kecil fs-5 tentanginspirasiteks">Terinspirasi dari Style Apple</p>
-        <h1>Umar Fauzan Irvan</h1>
-        <p>Developer | Designer | Writer</p>
-    </section>
-
-    <div>
-    <img src="bumi2.jpg" alt="" class="projek9">
-        <h2 class="projek">Singkat Tentang Saya</h2>
-    </div>
-        <section class="content">
-        <p>Halo! Saya Umar, seorang pelajar di SMK Wikrama Bogor dengan minat dalam teknologi, pemrograman, dan desain web.
-        </p>
-        <p>
-            Saya sekarang Sedang Menempuh pendidikan Jenjang SMK Di SMK Wikrama Bogor, Dengan Tujuan
-            Menjadi Front-End dan UI-UX Designer Semoga Tujuan Saya Tercapai, Aminnn
-        </p>
-        <p class="container">
-            Lahir Tahun 2008, Memiliki Beberapa Hobi Seperti Bermain Game, Membuat Game, Bermain Bulu Tangkis dan Olahraga Bulu Tangkis
-        </p>
-
-        <p>Lengkapnya Tentang Saya Bisa kalian Klik Tombol di Bawah</p>
-        <div class="gap-2 d-flex justify-content-center p-3">
-            <a href="index.html" class="btn btn-apple">Tentang Saya</a>
-          </div>
-
-        <img src="wikrama-logo (1).png" alt="" class="logowikrama">
-    </section>
-
-    <!-- Sertifikat Carousel -->
-    <section class="container my-5">
-        <h2 class="text-center">Sertifikat Saya</h2>
-        <div id="sertifikatCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="SER/ser1.jpg" class="d-block w-100" alt="Sertifikat 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="SER/ser2.jpg" class="d-block w-100" alt="Sertifikat 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="SER/SER3.png" class="d-block w-100" alt="Sertifikat 3">
-                </div>
-                <div class="carousel-item">
-                    <img src="SER/SER4.png" class="d-block w-100" alt="Sertifikat 3">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#sertifikatCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#sertifikatCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </section>
-
-    <script>
-        gsap.to(".iphone-img", {
-            scale: 1.2,
-            scrollTrigger: {
-                trigger: ".hero",
-                start: "top top",
-                end: "bottom center",
-                scrub: true,
-            }
-        });
-    </script>
 </body>
 
-<footer class="bg-dark text-white py-5 mt-5">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-md-3">
-                <h5>Tentang</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white text-decoration-none">Tentang Kami</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Karier</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h5>Produk</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white text-decoration-none">Novel</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Game</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h5>Dukungan</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white text-decoration-none">Saweria</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h5>Ikuti Kami</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white text-decoration-none">Instagram</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">YouTube</a></li>
-                </ul>
-            </div>
+
+
+<div class="memes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .hiasan {
+            display: block;
+            margin: 20px auto;
+        }
+
+        .judul12 {
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .nama2 {
+            font-size: 20px;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .gambar {
+            width: 230px;
+            margin: 10px auto;
+            display: block;
+        }
+
+        .container {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            line-height: 1.6;
+        }
+
+        .nama {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 30px;
+            color: #ffba45;
+        }
+
+        .biodata2, .biodata {
+            font-size: 20px;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+
+        .biodata {
+            font-style: italic;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        
+        /* Efek hover buat keahlian */
+        .biodata:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <p class="judul12">名前 • Nama • اسم </p>
+    <p class="nama2">氏名およびその他のデータ º الاسم الكامل والبيانات الأخرى</p>
+    
+    <img src="utama.png" class="gambar image-container13">
+
+    <p class="nama">Biodata Singkat</p>
+    
+    <p class="container">
+        Umar Fauzan Irvan atau kerap dipanggil Umar ini lahir pada 19 November 2008 di Depok, Jawa Barat. 
+        Setelah menamatkan mondok pesantren selama 3 tahun, Umar melanjutkan pendidikannya di SMK Wikrama Bogor. 
+        Sekarang Umar tinggal di Sawangan, Pasir Putih, Depok.
+    </p>
+
+    <p class="nama">Tempat Tinggal</p>
+    <p class="biodata2">📍 Berdomisili di Depok, Sawangan</p>
+
+    <div class="image-container12 projek">
+    <img class="" src="logodepok2.png" alt="" style="width: 194px;">
+    </div>
+
+    <p class="nama">スキル • Keahlian • مهارة</p>
+    <p class="biodata">
+        Editor Pemula • Gamer • Scratcher • Youtuber • Content Creator
+    </p>
+
+    
+</body>
+</html>
+
+<div>
+    <h1 class="percent" data-target="76">0</h1><h1>Persen</h1>
+</div>
+<p class="biodata">Penguasaan HTML & CSS</p>
+
+<div>
+    <h1 class="percent" data-target="97">0</h1><h1>Persen</h1>
+</div>
+    <p class="biodata">Attitude</p>
+
+    <h1 class="percent">40%</h1>
+ <p class="biodata">Arabic Languange</p>
+    <p class="biodata">*Data Bisa Berubah Seiring waktu</p>
+
+    <img src="sigma.png" alt="" class="umar1120">
+    
+    <img src="projekkecil.png" alt="" class="projek">
+
+    <div class="image-container12 projek">
+        <div class="neverland3">
+            <img src="Gray and Blue Simple Book Cover A4 (1).png" alt="Book Cover" class="neverland container">
+            <p style="font-family: system-ui, 
+            -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
+            Ubuntu, Cantarell, 'Open Sans', 
+            'Helvetica Neue', sans-serif;">Old Cover, You can See New Cover in Wattpad</p>
         </div>
-        <div class="mt-4">
-            <p class="small text-light ">&copy; 2025 Umar F.I. – Desain eksklusif dengan sentuhan kreatif. Disempurnakan pada Maret 2025 | GitHub 2025 Dikembangkan oleh Bmdu Studio untuk Personal Website. </p>
+    </div>    
+
+        <h1 class="nama" style="margin-bottom:22px;">Novel (Nagai Ryoko - 長い旅行)</h1>
+
+    <div>
+        <img src="pohonnagairyoko.png" alt="" class="neverland">
+
+        <h1>Nagai Ryoko - 長い旅行</h1>
+
+        <p class="container" style="font-size: 20px;">Karya ini ditulis oleh Umar Fauzan (Ufauzan) dalam kurun waktu 3 bulan 15 hari, melalui 4 tahap revisi yang berlangsung dari November hingga Januari.</p>
+        <p class="container">Novel ini mengisahkan perjalanan Usahlan dan Nia, dua individu yang memiliki koneksi unik di ingatan mereka, serupa dengan teknologi Bluetooth, yang terjalin setiap kali kereta saling melintas.</p>
+        <p class="container">Kisah lengkapnya dapat dibaca melalui Wattpad atau diperoleh dalam bentuk buku fisik.</p>
+        
+    </div>
+
+    <p class="nama">Riwayat Pendidikan</p>
+
+    <div class="education-container">
+
+        <div class="education-item">
+            <img src="sekolahalam.png" alt="SMK Wikrama Bogor" class="edu-logo">
+            <a class="edu-text" href="https://saimeruyung.sch.id/" target="_blank">(2016-2018) Sekolah Alam Meruyung</a>
+        </div>
+
+        <div class="education-item">
+            <img src="presgo.png" alt="SD Prestasi Global" class="edu-logo">
+            <a class="edu-text" href="https://www.prestasiglobal.id/" target="_blank">(2018-2021) SD Prestasi Global</a>
+        </div>
+        
+        <div class="education-item">
+            <img src="mbs.png" alt="MBS KBH Bogor" class="edu-logo">
+            <a class="edu-text" href="https://www.mbskibagus.sch.id/" target="_blank">(2021-2024) MBS KBH Bogor</a>
+        </div>
+    
+        <div class="education-item">
+            <img src="wikrama-logo (1).png" alt="SMK Wikrama Bogor" class="edu-logo">
+            <a class="edu-text" href="https://smkwikrama.sch.id/" target="_blank">(2024-2027) SMK Wikrama Bogor</a>
         </div>
     </div>
-</footer>
+    
+</div>
+
+<p class="story">
+    © 2025 Umar F.I. – Desain eksklusif dengan sentuhan kreatif.
+Disempurnakan pada Maret 2025 | GitHub 2025
+Dikembangkan oleh Bmdu Studio untuk Personal Website.
+</p>
+
+</body>
 </html>
