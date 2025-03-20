@@ -55,6 +55,8 @@
     width: 120px;
     margin-top: 20px;
     animation: float 3s infinite ease-in-out;
+    border-radius: 90px;
+    box-shadow: 0 0 20px #b562bb;
 }
 
 /* Animasi Logo */
@@ -63,3 +65,6 @@
     50% { transform: translateY(-8px); }
     100% { transform: translateY(0); }
 }
+
+
+

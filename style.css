@@ -170,13 +170,21 @@
     margin-bottom: 1px;
     margin-top: 1px;
 }
-.projek{
-    justify-content: center;
+.projek {
     display: grid;
+    justify-content: center;
     text-align: center;
-    margin: auto;
-    width: 390px;
-    }
+    margin: 0 auto;
+    max-width: 100%; /* Pastikan container tidak lebih besar dari layar */
+}
+
+.projek img {
+    max-width: 100%; /* Biar gambar tetap dalam batas parent */
+    height: auto; /* Supaya tidak terdistorsi */
+    display: block; /* Hindari extra space di bawah gambar */
+    margin: 0 auto; /* Tengahin gambar */
+}
+
 .sigma{
     text-align: center;
     display: flex;
