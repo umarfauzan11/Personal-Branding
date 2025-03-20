@@ -50,3 +50,21 @@
     width: 200px;
     cursor: pointer;
 }
+
+.back-button2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 18px;
+    padding: 5px 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.back-button:hover {
+    transform: scale(1.05);
+}
