@@ -1,0 +1,46 @@
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.back-button:hover {
+    background: #676767;
+    transform: scale(1.05);
+}
+
+.icon {
+    fill: white;
+}
+
+.back-button span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.shiny-button {
+    background: linear-gradient(90deg, #007bff, #00d4ff);
+    background-size: 200% 200%;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.shiny-button:hover {
+    background-position: right center;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+}

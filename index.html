@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perkenalan - Umar Fauzan Irvan</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="button.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -77,10 +78,15 @@
     }
 
     .btn-apple:hover {
-    background-color: #005bb5; /* Warna lebih gelap saat hover */
+    background-color: #676767; /* Warna lebih gelap saat hover */
     }
     .kecil{
         font-size: 2px;
+    }
+
+    .scrollImage {
+            width: 300px;
+            transition: opacity 0.8s ease, transform 0.5s ease;
     }
     </style>
 </head>
@@ -96,17 +102,17 @@
 </header>
     
     <section class="hero">
-        <!-- <img src="utama.png"iphone-img" alt="iPhone 16 Style"> -->
+        <img src="utama.png" class="scrollImage" alt="Gambar 1">
         <p class="kecil fs-5 tentanginspirasiteks">Terinspirasi dari Style Apple</p>
         <h1>Umar Fauzan Irvan</h1>
         <p>Developer | Designer | Writer</p>
         <div class="gap-2 d-flex justify-content-center p-3">
-            <a href="cv.html" class="btn btn-apple">Download CV</a>
+            <a href="cv.html" class="btn btn-apple shiny-button">Download CV</a>
           </div>
     </section>
 
     <div>
-    <img src="bumi2.jpg" alt="" class="projek9">
+    <img src="bumi2.jpg" class="projek9">
         <h2 class="projek">Singkat Tentang Saya</h2>
     </div>
         <section class="content">
@@ -122,7 +128,7 @@
 
         <p>Lengkapnya Tentang Saya Bisa kalian Klik Tombol di Bawah</p>
         <div class="gap-2 d-flex justify-content-center p-3">
-            <a href="tentang.html" class="btn btn-apple">Tentang Saya</a>
+            <a href="tentang.html" class="btn btn-apple shiny-button">Tentang Saya</a>
           </div>
 
         <img src="wikrama-logo (1).png" alt="" class="logowikrama">
@@ -158,15 +164,30 @@
     </section>
 
     <script>
-        gsap.to(".iphone-img", {
-            scale: 1.2,
-            scrollTrigger: {
-                trigger: ".hero",
-                start: "top top",
-                end: "bottom center",
-                scrub: true,
+document.addEventListener("DOMContentLoaded", function () {
+    let images = document.querySelectorAll(".scrollImage"); // Ambil semua gambar dengan class 'scrollImage'
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        images.forEach(image => {
+            if (scrollTop > lastScrollTop) {
+                // Scroll ke bawah - sembunyikan gambar dengan fade out
+                image.style.opacity = "0";
+                image.style.transform = "scale(0.8)";
+                image.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+            } else {
+                // Scroll ke atas - tampilkan gambar dengan fade in
+                image.style.opacity = "1";
+                image.style.transform = "scale(1)";
+                image.style.transition = "opacity 0.5s ease, transform 0.5s ease";
             }
         });
+
+        lastScrollTop = scrollTop;
+    });
+});
     </script>
 </body>
 
@@ -184,7 +205,7 @@
                 <h5>Produk</h5>
                 <ul class="list-unstyled">
                     <li><a href="#" class="text-white text-decoration-none">Novel</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Game</a></li>
+                    <li><a href="mygames.html" class="text-white text-decoration-none">Game</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
