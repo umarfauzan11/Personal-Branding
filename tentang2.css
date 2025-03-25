@@ -1,0 +1,54 @@
+.education-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* Latar belakang hitam */
+    border-radius: 10px;
+}
+
+.education-item {
+    text-align: center;
+    background: rgba(0, 0, 0, 0); /* Latar transparan */
+    padding: 25px;
+    width: 200px;
+    border-radius: 50px;
+}
+
+.edu-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.edu-text {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 18px;
+    padding: 5px 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.back-button:hover {
+    background: #676767;
+    transform: scale(1.05);
+}
+.back-button span {
+    font-size: 18px;
+    font-weight: bold;
+}

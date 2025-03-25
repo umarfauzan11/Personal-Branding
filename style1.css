@@ -1,0 +1,305 @@
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow-x: hidden; /* Mencegah geser ke kanan */
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.designer {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 140px;
+    padding: 122px;
+    color: #92929200;
+    position: absolute;
+    text-shadow: 0 0 5px #ffbb4500, 0 0 10px #ffffff, 0 0 20px #ffba45;
+}
+
+.dev {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 140px;
+    padding: 122px;
+    color: #ff42f200;
+    position: absolute;
+    text-shadow: 0 0 5px #ff42f200, 0 0 10px #ffffff, 0 0 20px #ff42f2;
+}
+
+.coder {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 140px;
+    padding: 122px;
+    color: #ffffff00;
+    position: absolute;
+    text-shadow: 0 0 5px #ffbb4500, 0 0 10px #ffffff, 0 0 20px #066ff0;
+}
+
+.designer {
+    margin-bottom: 140px;
+    text-align: center;
+}
+
+.dev {
+    margin-bottom: -130px;
+    text-align: center;
+}
+
+.coder {
+    text-align: center;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    background: gray;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 90px;
+    position: absolute;
+    border-radius: 50px;
+}
+
+.phone2 {
+    position: relative;
+    border-radius: 60px;
+    width: 300px; /* Sesuaikan ukuran */
+    height: 300px; /* Atur tinggi sesuai kebutuhan */
+    background-position: center; /* Posisikan background di tengah */
+    justify-content: center; /* Pusatkan gambar cover */
+    align-items: center;
+}
+
+.gambar {
+    max-width: 100%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border-radius: 50%; /* Membuat gambar bulat */
+    object-fit: cover; /* Biar gambar tidak terdistorsi */
+}
+
+.bio {
+    background: #222;
+    color: white;
+    padding: 50px 20px;
+    gap: 20px;
+}
+
+.bio2 {
+    
+    background: #222;
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    gap: 10px;
+}
+
+h2 {
+    color: #ffba45;
+}
+
+.long-text {
+    color: #009dff;
+    font-size: 24px;
+}
+
+.container {
+    font-size: 27px;
+    max-width: 700px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    line-height: 1.6;
+    display: flex;
+}
+
+.container22 {
+    padding-top: 43px;
+    padding-bottom: 43px;
+    gap: 10px;
+    margin: auto;
+    background-position: center; /* Posisikan background di tengah */
+    display: flex;
+    justify-content: center; /* Pusatkan gambar cover */
+    align-items: center;
+}
+
+.container12 {
+    border-radius: 90px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 30px;
+}
+
+.domisili {
+    font-size: 23px;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.depokleft {
+    align-content: center;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    padding-bottom: 30px;
+    padding-top: 23px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box {
+    border-radius: 50px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.small {
+    background-image: url("ICON/cssda.png");
+    width: 300px;
+    height: 160px;
+    background-size: cover;  /* Atau bisa pakai 'contain' */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.small2 {
+    background-color: gray;
+    background-image: url("ICON/htmlda.png");
+    width: 300px;
+    height: 160px;
+    background-size: cover;  /* Atau bisa pakai 'contain' */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.large {
+    background-image: url("ICON/bigda.png");
+    width: 250px;
+    height: 330px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.number {
+    font-size: 40px;
+}
+
+.text {
+    font-size: 20px;
+    color: white;
+}
+
+.iconlogohtml{
+    width: 85px;
+}
+
+.percent1{
+    font-family: 'Poppins', sans-serif;
+    text-align: end;
+    display: grid;
+    color:white;
+    font-size: 56px;
+    margin: 169px;
+    align-items: end;
+    justify-content: end;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 94px;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px;
+    border: 3px solid black;
+    display: inline-block;
+}
+
+.kotak{
+    transition: transform 0.8s ease; /* Animasi perubahan ukuran */
+    transform: scale(1.0); /* Ukuran normal */
+}
+.kotak:hover{
+    transform: scale(0.9); /* Membesar saat di-hover */
+}
+
+
+.containers {
+    background-color: #222;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.boxs {
+    background-color: #ff6b6b;
+    padding: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 30px;
+    transition: 0.3s;
+    
+}
+
+.boxs:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Warna Box */
+.boxs:nth-child(2) { background-color: #ffa502; }
+.boxs:nth-child(3) { background-color: #1e90ff; }
+.boxs:nth-child(4) { background-color: #2ed573; }
+.boxs:nth-child(5) { background-color: #ff4757; }
+.boxs:nth-child(6) { background-color: #3742fa; }
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .containers {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.gambar{
+    background-image: url("ICON/csslogo.svg");
+}

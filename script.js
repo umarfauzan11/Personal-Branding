@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".percent"); // Ambil semua elemen yang punya class "percent"
-
+    const counters = document.querySelectorAll(".percent, .percent1"); // Ambil semua elemen yang punya class "percent"
+    
     counters.forEach(counter => {
         const target = +counter.getAttribute("data-target"); // Ambil nilai target
         let count = 0; // Mulai dari 0
@@ -13,6 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 clearInterval(animate); // Hentikan animasi saat target tercapai
             }
-        }, 20); // Setiap 20ms naik 1 angka
+        }, 60); // Setiap 20ms naik 1 angka
     });
 });
