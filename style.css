@@ -481,13 +481,32 @@ body {
     transition: color 0.3s ease-in-out; /* Animasi smooth */
 }
 .tentanginspirasiteks:hover{
-    color: #0071e3; /* Warna saat di-hover (Apple Blue) */
+    color: #ffffff; /* Warna saat di-hover (Apple Blue) */
 }
 .projek9{
     justify-content: center;
     text-align: center;
-    margin: auto;
-    width: 900px;;
+    align-items: center;
+    display: flex;
+    width: 900px;
+}
+.bumi{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 215px;
+}
+.containerbumi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
 }
 
 .welcomee{

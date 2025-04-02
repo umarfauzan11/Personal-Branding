@@ -2,7 +2,7 @@
     max-width: 600px;
     margin: 50px auto;
     padding: 30px;
-    background: linear-gradient(135deg, #2e1e2f, #000000);
+    background: linear-gradient(135deg, #1e262f, #000000);
     border-radius: 15px;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
     text-align: center;
@@ -37,7 +37,7 @@
     font-size: 18px;
     font-weight: bold;
     color: white;
-    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    background: linear-gradient(90deg, #ffaa49, #2e7de5);
     border: none;
     border-radius: 50px;
     box-shadow: 0 4px 15px rgba(255, 138, 0, 0.4);
@@ -56,7 +56,7 @@
     margin-top: 20px;
     animation: float 3s infinite ease-in-out;
     border-radius: 90px;
-    box-shadow: 0 0 20px #b562bb;
+    box-shadow: 0 0 20px #ffffff;
 }
 
 /* Animasi Logo */
