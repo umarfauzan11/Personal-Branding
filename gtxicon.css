@@ -1,0 +1,23 @@
+.gtxicon{
+    width:40px; 
+    margin: auto; 
+    justify-content: center; 
+    align-items: center;
+    padding: 7px;
+}
+
+.gtxeffect {
+    transition: 0..3s ease-in-out;
+}
+.gtxeffect:hover {
+    filter: brightness(1.3);
+    transform: scale(1.1);
+}
+
+.gtxicon2{
+    width:60px;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
