@@ -7,6 +7,9 @@
     <title>GTX Explore Is Here With New Version👌</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="button.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <script>
@@ -19,19 +22,14 @@
     </script>
     <body>
     
-        <header class="revisi2">
-            <!-- Tombol Back -->
-            <div class="back-button" onclick="window.history.back()">
-                <svg width="24" height="24" viewBox="0 0 20 20" class="icon" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.2915 2.70833C2.2915 1.90292 2.94442 1.25 3.74984 1.25H8.33317C8.67835 1.25 8.95817 1.52982 8.95817 1.875C8.95817 2.22018 8.67835 2.5 8.33317 2.5H3.74984C3.63478 2.5 3.5415 2.59327 3.5415 2.70833V17.2917C3.5415 17.4067 3.63478 17.5 3.74984 17.5H8.33317C8.67835 17.5 8.95817 17.7798 8.95817 18.125C8.95817 18.4702 8.67835 18.75 8.33317 18.75H3.74984C2.94442 18.75 2.2915 18.0971 2.2915 17.2917V2.70833Z"></path>
-                    <path d="M15.6301 10.625L12.8795 13.5285C12.6421 13.7791 12.6527 14.1747 12.9033 14.4121C13.1539 14.6494 13.5495 14.6388 13.7869 14.3882L17.5369 10.4298C17.7653 10.1888 17.7653 9.81122 17.5369 9.57016L13.7869 5.61183C13.5495 5.36124 13.1539 5.35055 12.9033 5.58795C12.6527 5.82534 12.6421 6.22093 12.8795 6.47151L15.6301 9.375H8.74984C8.40466 9.375 8.12484 9.65482 8.12484 10C8.12484 10.3452 8.40466 10.625 8.74984 10.625H15.6301Z"></path>
-                </svg>
-                <span>Back</span>
-            </div>
+    <header class="revisi2">
+        <header class="revisi2 d-flex align-items-center justify-content-between px-3 py-2">
+            <!-- Logo -->
+            <img src="gtx/gtxlogo.png" style="width: 53px; padding-left: 10px;">
         
             <!-- Navbar -->
-            <nav>
-                <!-- Tombol Home dengan Logo -->
+            <nav class="d-flex align-items-center gap-3">
+                <!-- Tombol Home -->
                 <a href="index.html" class="back-button">
                     <svg width="24" height="24" viewBox="0 0 20 20" class="icon" xmlns="http://www.w3.org/2000/svg">
                         <path class="fill-grey-6" fill-rule="evenodd" clip-rule="evenodd" d="M9.19128 2.15819C9.65778 1.76237 10.3422 1.76237 10.8087 2.15819L17.0587 7.46122C17.3386 7.69872 17.5 8.04726 17.5 8.41436V16.25C17.5 16.9404 16.9404 17.5 16.25 17.5H11.4583C11.1132 17.5 10.8333 17.2202 10.8333 16.875V11.6667H9.16667V16.875C9.16667 17.2202 8.88684 17.5 8.54167 17.5H3.75C3.05964 17.5 2.5 16.9404 2.5 16.25V8.41436C2.5 8.04726 2.66136 7.69872 2.94128 7.46122L9.19128 2.15819ZM10 3.11133L3.75 8.41436L3.75 16.25H7.91667V11.0417C7.91667 10.6965 8.19649 10.4167 8.54167 10.4167H11.4583C11.8035 10.4167 12.0833 10.6965 12.0833 11.0417V16.25H16.25V8.41436L10 3.11133Z"></path>
@@ -39,7 +37,20 @@
                 </a>
         
                 <!-- Link Tentang -->
-                <a href="tentang.html" class="back-button" style="font-weight: bold;">Tentang</a>
+                <a href="tentang.html" class="back-button">Tentang</a>
+        
+                <!-- Dropdown -->
+                <div class="back-button dropdown">
+                    <a style="text-decoration: none;"class="btn btn-link text-white dropdown-toggle p-0" href="#" role="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                        Menu
+                    </a>
+                    <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenu">
+                        <li><a class="dropdown-item text-white" href="https://example.com/game">Game</a></li>
+                        <li><a class="dropdown-item text-white" href="https://saweria.co/">Saweria</a></li>
+                        <li><a class="dropdown-item text-white" href="https://github.com/">GitHub</a></li>
+                    </ul>
+                </div>
+                
             </nav>
         </header>
 
@@ -62,22 +73,20 @@
             <img src="gtx/release.png" alt="" class="d-grid justify-content-center m-auto">
             </div>
 
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-secondary btn-lg" style="margin-right: 22px;">Linux .Deb</button>
-                        <button type="button" class="btn btn-secondary btn-lg" style="margin-right: 22px;">Windows .Exe</button>
-                    </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <a class="btn btn-outline-light gtxdownloadbutton" style="margin: 10px; padding: 13px;" type="button">Download For Linux.deb</a>
+                <a class="btn btn-outline-light gtxdownloadbutton" style="margin: 10px; padding: 13px;" type="button">Download For Windows 64 bit</a>
+              </div>
 
                         <p class="judulgtx">Since 2020. See Inside About This Game</p>
                         <div class="gap-2 d-flex justify-content-center">
-                            <a type="button" class="btn btn-secondary btn-lg" href="mygamesinside.html">See Inside</a>
+                            <a type="button" class="btn btn-outline-light btn-lg" href="mygamesinside.html">See Inside</a>
                           </div>
                           <style>
                             body {
-                                background-color: #000; /* Background hitam */
-                                color: #fff; /* Warna teks putih untuk kontras */
-                                font-family: Arial, sans-serif;
-                                margin: 0;
-                                padding: 0;
+                                overflow-x: hidden;
+                                 margin: 0;
+                                 padding: 0;
                             }
                         
                             .judulgtx {
@@ -131,29 +140,29 @@
                             }
                         </style>
                         
-                        <p class="judulgtx">What is GTX EXPLORE?</p>
                         
-                        <div class="language-container">
+                        <div class="language-container" style="padding: 100px;">
+                            <p class="judulgtx">What is GTX EXPLORE?</p>
                             <div class="language-block">
-                                <p class="deskripsiexplore">🇮🇩 <strong>Bahasa Indonesia</strong><br>
+                                <p class="deskripsiexplore" style="padding-left: 83px; padding-right: 83px;">🇮🇩 <strong>Bahasa Indonesia</strong><br>
                                     GTX Explore adalah game yang saya kembangkan secara mandiri sejak 2020. Namun, karena berbagai kendala, pengembangan sempat terhenti dari 2021 hingga 2023. Di pertengahan 2024, proyek ini kembali dilanjutkan dan terus berkembang hingga saat ini.
                                 </p>
                             </div>
                         
                             <div class="language-block">
-                                <p class="deskripsiexplore">🇬🇧 <strong>English</strong><br>
+                                <p class="deskripsiexplore" style="padding-left: 83px; padding-right: 83px;">🇬🇧 <strong>English</strong><br>
                                     GTX Explore is a game I have been developing solo since 2020. However, due to various challenges, development was paused between 2021 and 2023. In mid-2024, I resumed work on the project, and it has been progressing ever since.
                                 </p>
                             </div>
                         
                             <div class="language-block">
-                                <p class="deskripsiexplore">🇯🇵 <strong>日本語 (にほんご)</strong><br>
+                                <p class="deskripsiexplore" style="padding-left: 83px; padding-right: 83px;">🇯🇵 <strong>日本語 (にほんご)</strong><br>
                                     GTX Explore (ジーティーエックス・エクスプローラー) は、2020年から私が一人で開発しているゲームです。しかし、さまざまな問題により、2021年から2023年まで開発が中断しました。2024年の半ばに再開し、現在も進化を続けています。
                                 </p>
                             </div>
                         </div>
                         
-                        <p class="story">
+                        <p class="story" style="color: white; padding: 33px;">
                             Mengisahkan seorang bernama Xong yang bosan dan ingin merasakan dunia luar, 
                             akan tetapi karena ia adalah pemula, banyak rintangan yang harus ia hadapi, 
                             hingga ia menemukan sebuah portal, semua itu dimulai.
@@ -161,3 +170,11 @@
                         
             </div>
     </div>
+
+    <!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>

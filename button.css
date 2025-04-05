@@ -4,8 +4,8 @@
     gap: 10px;
     color: white;
     font-size: 18px;
-    padding: 5px 50px;
-    border-radius: 8px;
+    padding: 5px 10px;
+    border-radius: 12px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
     text-decoration: none;
@@ -13,8 +13,9 @@
 }
 
 .back-button:hover {
-    background: #676767;
     transform: scale(1.05);
+    color: white;
+    text-decoration: none;
 }
 
 .icon {
@@ -67,4 +68,10 @@
 
 .back-button:hover {
     transform: scale(1.05);
+}
+
+.gtxdownloadbutton {
+    font-family: roboto;
+    font-size: 34px;
+    border-radius: 94px;
 }
