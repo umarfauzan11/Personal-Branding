@@ -3,244 +3,379 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perkenalan - Umar Fauzan Irvan</title>
-    <link rel="stylesheet" href="gtxicon.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="button.css">
-    <link rel="stylesheet" href="indexabout.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <title>Portofolio Umar Fauzan Irvan</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
     <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --accent: #f59e0b;
+        }
+        
         body {
-            background-color: black;
-            color: white;
             font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
             overflow-x: hidden;
         }
-
-        .hero {
-            height: 100vh;
+        
+        /* Header Modern */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+        }
+        
+        .navbar {
             display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .navbar a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .navbar a:hover {
+            color: var(--primary);
+        }
+        
+        .navbar a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .navbar a:hover:after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            flex-direction: column;
+            padding: 0 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
         }
-
+        
         .hero img {
-            max-width: 100%;
-            height: auto;
-            transform: scale(1);
-            transition: transform 0.5s ease-in-out;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
         }
-
+        
         .hero h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            margin-top: 20px;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        .hero p {
-            font-size: 1.5rem;
-            opacity: 0.8;
+        
+        .hero p.subtitle {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 600px;
+            margin-bottom: 2rem;
         }
-
-        .content {
-            padding: 100px 10%;
+        
+        /* Button Style */
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+            background-color: #1d4ed8;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 5rem 2rem;
+            background-color: white;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
         }
-
-        .iphone-img {
-            max-width: 50%;
-            display: block;
-            margin: 0 auto;
+        
+        /* Certificates */
+        .certificates-section {
+            padding: 5rem 2rem;
+            background-color: #f8fafc;
         }
-
-        .carousel img {
-            max-width: 70%;
-            height: auto;
+        
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .certificate-card {
+            background: white;
             border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .certificate-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .certificate-card .card-body {
+            padding: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
-        .logowikrama{
-            width: 145px;
+        
+        .footer-column h5 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
         }
-
-        .btn-apple {
-    border-radius: 50px; /* Biar lebih bulat dan smooth */
-    padding: 12px 24px;  /* Kasih padding biar proporsional */
-    font-size: 16px;
-    font-weight: 500;
-    background-color: #0071e3; /* Warna biru khas Apple */
-    color: white;
-    border: none;
-    transition: all 0.3s ease-in-out;
-    }
-
-    .btn-apple:hover {
-    background-color: #676767; /* Warna lebih gelap saat hover */
-    }
-    .kecil{
-        font-size: 2px;
-    }
-
-    .scrollImage {
-            width: 300px;
-            transition: opacity 0.8s ease, transform 0.5s ease;
-    }
+        
+        .footer-column h5:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-column a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p.subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
-
-    <header class="revisi2">
-        <a href="#" class="logo">Portofolio</a>
-    <nav class="navbar">
-        <a href="index.html">
-            <svg width="24" height="24" viewBox="0 0 20 20" class="icon" xmlns="http://www.w3.org/2000/svg">
-                <path class="fill-grey-6" fill-rule="evenodd" clip-rule="evenodd" d="M9.19128 2.15819C9.65778 1.76237 10.3422 1.76237 10.8087 2.15819L17.0587 7.46122C17.3386 7.69872 17.5 8.04726 17.5 8.41436V16.25C17.5 16.9404 16.9404 17.5 16.25 17.5H11.4583C11.1132 17.5 10.8333 17.2202 10.8333 16.875V11.6667H9.16667V16.875C9.16667 17.2202 8.88684 17.5 8.54167 17.5H3.75C3.05964 17.5 2.5 16.9404 2.5 16.25V8.41436C2.5 8.04726 2.66136 7.69872 2.94128 7.46122L9.19128 2.15819ZM10 3.11133L3.75 8.41436L3.75 16.25H7.91667V11.0417C7.91667 10.6965 8.19649 10.4167 8.54167 10.4167H11.4583C11.8035 10.4167 12.0833 10.6965 12.0833 11.0417V16.25H16.25V8.41436L10 3.11133Z"></path>
-            </svg>
-        </a>
-        <a href="projek.html" style="font-weight: bold;">Projek</a>
-        <a href="mygames.html" target="_blank"><img src="ICON/gtxicon21.png" class="gtxicon2 gtxeffect"></a>
-    </nav>
-</header>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Portofolio</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projek.html">Projek</a>
+                <a href="mygames.html">My Games</a>
+            </div>
+        </nav>
+    </header>
     
+    <!-- Hero Section -->
     <section class="hero">
-        <img src="utama.png" class="scrollImage" alt="Gambar 1">
-        <p class="kecil fs-5 tentanginspirasiteks">GitHub: Umarfauzan11</p>        
+        <img src="utama.png" alt="Umar Fauzan Irvan">
         <h1>Umar Fauzan Irvan</h1>
-        <p>Developer | Designer | Writer | Gamer</p>
-        <div class="gap-2 d-flex justify-content-center p-3">
-            <a href="cv.html" class="btn btn-apple shiny-button">Download CV</a>
-          </div>
+        <p class="subtitle">Developer | Designer | Writer | Gamer</p>
+        <p>GitHub: Umarfauzan11</p>
+        <a href="cv.html" class="btn btn-primary mt-3">Download CV</a>
     </section>
-
-    <div class="contaierbumi" data-aos="fade-up" data-aos-duration="120000" alt="Gambar">
-    <img src="kk.png" class="bumi">
-        <h2 class="projek">Singkat Tentang Saya</h2>
-    </div>
-
-    <section class="content1">
-        <p>👋 Halo! Saya <strong>Umar</strong>, seorang pelajar di <strong>SMK Wikrama Bogor</strong> dengan minat dalam <span style="color:#ff8a00; font-weight:bold;">teknologi</span>, <span style="color:#e52e71; font-weight:bold;">pemrograman Game</span>, dan <span style="color:#00bcd4; font-weight:bold;">desain web</span>.</p>
     
-        <p>🚀 Saya sedang menempuh pendidikan jenjang SMK di <strong>SMK Wikrama Bogor</strong> dengan tujuan menjadi <strong>Front-End Developer</strong> dan <strong>UI/UX Designer</strong>. Semoga tercapai! <span style="color: #ffcc00;">Aminnn! 🙌</span></p>
-    
-        <p>🎮 Lahir tahun <strong>2008</strong>, saya memiliki beberapa hobi seperti <strong>bermain game</strong>, <strong>membuat game</strong>, serta olahraga favorit saya yaitu <strong>bulu tangkis</strong> 🏸.</p>
-    
-        <p>🔎 Lebih lengkap tentang saya? Klik tombol di bawah!</p>
-    
-        <div class="gap-2 d-flex justify-content-center p-3">
-            <a href="tentang.html" class="shiny-button1">Tentang Saya</a>
+    <!-- About Section -->
+    <section class="about-section">
+        <h2 class="section-title">Tentang Saya</h2>
+        <div class="about-content">
+            <p>👋 Halo! Saya <strong>Umar</strong>, seorang pelajar di <strong>SMK Wikrama Bogor</strong> dengan minat dalam <span style="color: var(--primary);">teknologi</span>, <span style="color: #e53e71;">pemrograman Game</span>, dan <span style="color: #38b2ac;">desain web</span>.</p>
+            
+            <p>🚀 Saya sedang menempuh pendidikan jenjang SMK di <strong>SMK Wikrama Bogor</strong> dengan tujuan menjadi <strong>Front-End Developer</strong> dan <strong>UI/UX Designer</strong>. Semoga tercapai! <span style="color: var(--accent);">Aminnn! 🙌</span></p>
+            
+            <p>🎮 Lahir tahun <strong>2008</strong>, saya memiliki beberapa hobi seperti <strong>bermain game</strong>, <strong>membuat game</strong>, serta olahraga favorit saya yaitu <strong>bulu tangkis</strong> 🏸.</p>
+            
+            <a href="tentang.html" class="btn btn-primary mt-4">Lebih Lengkap</a>
+            
+            <div class="mt-5">
+                <img src="wikrama-logo (1).png" alt="SMK Wikrama" style="height: 60px;">
+            </div>
         </div>
-    
-        <img src="wikrama-logo (1).png" alt="Logo Wikrama" class="logowikrama1" data-aos="fade-up" data-aos-duration="120000">
     </section>
-
-    <!-- Sertifikat Carousel -->
-    <section class="container my-5">
-        <h2 class="text-center p-3">Sertifikat Saya</h2>
-        <div id="sertifikatCarousel" class="carousel slide pb-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="SER/ser1.jpg" class="d-block w-100" alt="Sertifikat 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="SER/ser2.jpg" class="d-block w-100" alt="Sertifikat 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="SER/SER3.png" class="d-block w-100" alt="Sertifikat 3">
-                </div>
-                <div class="carousel-item">
-                    <img src="SER/SER4.png" class="d-block w-100" alt="Sertifikat 3">
-                </div>
-                <div class="carousel-item">
-                    <img src="SER/SER5.png" class="d-block w-100" alt="Sertifikat 4">
+    
+    <!-- Certificates Section -->
+    <section class="certificates-section">
+        <h2 class="section-title">Sertifikat Saya</h2>
+        <div class="certificate-grid">
+            <div class="certificate-card">
+                <img src="SER/ser1.jpg" alt="Sertifikat 1">
+                <div class="card-body">
+                    <h5>Sertifikat 1</h5>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#sertifikatCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#sertifikatCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="certificate-card">
+                <img src="SER/ser2.jpg" alt="Sertifikat 2">
+                <div class="card-body">
+                    <h5>Sertifikat 2</h5>
+                </div>
+            </div>
+            <div class="certificate-card">
+                <img src="SER/SER3.png" alt="Sertifikat 3">
+                <div class="card-body">
+                    <h5>Sertifikat 3</h5>
+                </div>
+            </div>
+            <div class="certificate-card">
+                <img src="SER/SER4.png" alt="Sertifikat 4">
+                <div class="card-body">
+                    <h5>Sertifikat 4</h5>
+                </div>
+            </div>
+            <div class="certificate-card">
+                <img src="SER/SER5.png" alt="Sertifikat 5">
+                <div class="card-body">
+                    <h5>Sertifikat 5</h5>
+                </div>
+            </div>
         </div>
     </section>
-
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-    let images = document.querySelectorAll(".scrollImage"); // Ambil semua gambar dengan class 'scrollImage'
-    let lastScrollTop = 0;
-
-    window.addEventListener("scroll", function () {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        images.forEach(image => {
-            if (scrollTop > lastScrollTop) {
-                // Scroll ke bawah - sembunyikan gambar dengan fade out
-                image.style.opacity = "0";
-                image.style.transform = "scale(0.8)";
-                image.style.transition = "opacity 0.5s ease, transform 0.5s ease";
-            } else {
-                // Scroll ke atas - tampilkan gambar dengan fade in
-                image.style.opacity = "1";
-                image.style.transform = "scale(1)";
-                image.style.transition = "opacity 0.5s ease, transform 0.5s ease";
-            }
-        });
-
-        lastScrollTop = scrollTop;
-    });
-});
-    </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
-</body>
-
-<footer class="bg-dark text-white py-5 mt-5">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-md-3 text-start">
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
                 <h5>Tentang</h5>
-                <ul class="list-unstyled">
-                    <li><a href="tentang.html" class="text-white text-decoration-none">Tentang Kami</a></li>
-                    <li><a href="#" class="text-white text-decoration-none">Karier</a></li>
+                <ul>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="#">Karier</a></li>
                 </ul>
             </div>
-            <div class="col-md-3 text-start">
+            <div class="footer-column">
                 <h5>Produk</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white text-decoration-none">Novel</a></li>
-                    <li><a href="mygames.html" class="text-white text-decoration-none">Game</a></li>
+                <ul>
+                    <li><a href="#">Novel</a></li>
+                    <li><a href="mygames.html">Game</a></li>
                 </ul>
             </div>
-            <div class="col-md-3 text-start">
+            <div class="footer-column">
                 <h5>Dukungan</h5>
-                <ul class="list-unstyled">
-                    <li><a href="https://saweria.com/umarsahlan1120" target="_blank" class="text-white text-decoration-none">Saweria</a></li>
+                <ul>
+                    <li><a href="https://saweria.com/umarsahlan1120">Saweria</a></li>
                 </ul>
             </div>
-            <div class="col-md-3 text-start">
+            <div class="footer-column">
                 <h5>Ikuti Kami</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white text-decoration-none">Instagram</a></li>
-                    <li><a href="https://www.youtube.com/@UFauzan" class="text-white text-decoration-none">YouTube</a></li>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/@UFauzan">YouTube</a></li>
                 </ul>
             </div>
         </div>
-        <div class="mt-4">
-            <p class="small text-light ">&copy; 2025 Umar F.I. – Desain eksklusif dengan sentuhan kreatif. Disempurnakan pada Maret 2025 | GitHub 2025 Dikembangkan oleh Bmdu Studio untuk Personal Website. </p>
+        <div class="copyright">
+            <p>&copy; 2025 Umar F.I. – Desain eksklusif dengan sentuhan kreatif. Disempurnakan pada Maret 2025 | GitHub 2025 Dikembangkan oleh Bmdu Studio untuk Personal Website.</p>
         </div>
-    </div>
-</footer>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
