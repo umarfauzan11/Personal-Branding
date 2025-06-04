@@ -27,76 +27,275 @@
         </nav>
     </header>
 
-    <div class="container mt-3">
-        <h2>Example of Jumbotron</h2>
-        <div class="mt-4 p-4 bg-white text-white rounded">
-            <h1 style="color: black; text-align: center;">My All Project</h1>
-            <p style="color: black; text-align: center;">
-                So, this is my project! From school projects to my personal ones, everything will be here.<strong>Yoroshiku onegaishimasu!</strong> Thank you! 😊
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-hover: #3a56d4;
+            --accent: #f72585;
+            --dark: #212529;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        /* Enhanced Jumbotron */
+        .project-header {
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 20px rgba(67, 97, 238, 0.15);
+            border: none;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-header:hover {
+            transform: translateY(-3px);
+        }
+        
+        .project-header h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .project-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .project-header strong {
+            color: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        /* Project Cards */
+        .project-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            background-color: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+            width: 100%;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+        
+        .card-text {
+            color: #6c757d;
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+        
+        .btn-outline-primary {
+            border-color: var(--primary);
+            color: var(--primary);
+            font-weight: 500;
+            border-width: 2px;
+            border-radius: 50px;
+            padding: 0.5rem 1.25rem;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(67, 97, 238, 0.2);
+        }
+        
+        /* Coming Soon Badge */
+        .coming-soon-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.35rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+        
+        /* Responsive Grid */
+        @media (max-width: 992px) {
+            .col-md-3 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .col-md-3 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .project-header {
+                padding: 1.5rem;
+            }
+            
+            .project-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .project-card {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <!-- Enhanced Jumbotron -->
+         <div style=" padding-bottom: 20px;">
+
+         </div>
+        <div class="project-header">
+            <h1>My All Projects</h1>
+            <p>
+                So, this is my project! From school projects to my personal ones, everything will be here. 
+                <strong>Yoroshiku onegaishimasu!</strong> Thank you! 😊
             </p>
         </div>
     
-        <div class="row mt-4 justify-content-center align-items-center" style="margin: 23px;">
+        <!-- Projects Grid -->
+        <div class="row">
+            <!-- Project 1 -->
             <div class="col-md-3">
-                <div class="card">
-                    <img src="file industri evolusi/10.png" class="card-img-top gambar2" alt="...">
+                <div class="project-card">
+                    <img src="file industri evolusi/10.png" class="card-img-top" alt="Evolusi Industri">
                     <div class="card-body">
                         <h5 class="card-title">Evolusi Industri</h5>
                         <p class="card-text">Dijelaskan dengan Semudah Mungkin</p>
-                        <a type="button" class="btn btn-outline-primary" href="sejarahevolusi.html">Lihat</a>
+                        <a href="sejarahevolusi.html" class="btn btn-outline-primary">
+                            <i class="fas fa-eye me-2"></i>Lihat
+                        </a>
                     </div>
                 </div>
             </div>
-        
+            
+            <!-- Project 2 -->
             <div class="col-md-3">
-                <div class="card">
-                    <img src="file industri evolusi/20.png" class="card-img-top gambar2" alt="...">
+                <div class="project-card">
+                    <img src="file industri evolusi/20.png" class="card-img-top" alt="Pipas Artikel">
                     <div class="card-body">
                         <h5 class="card-title">Pipas Artikel</h5>
                         <p class="card-text">Dijelaskan dengan Sekompleks Mungkin</p>
-                        <a type="button" class="btn btn-outline-primary" href="pipasartikel.html">Lihat</a>
+                        <a href="pipasartikel.html" class="btn btn-outline-primary">
+                            <i class="fas fa-eye me-2"></i>Lihat
+                        </a>
                     </div>
                 </div>
             </div>
-        
+            
+            <!-- Project 3 -->
             <div class="col-md-3">
-                <div class="card">
-                    <img src="file industri evolusi/30.png" class="card-img-top gambar2" alt="...">
+                <div class="project-card">
+                    <div class="coming-soon-badge">COMING SOON</div>
+                    <img src="file industri evolusi/30.png" class="card-img-top" alt="Matematika">
                     <div class="card-body">
                         <h5 class="card-title">Matematika</h5>
-                        <p class="card-text">COMING SOON - Kalkulator Rumus</p>
-                        <button type="button" class="btn btn-outline-primary">Lihat</button>
+                        <p class="card-text">Kalkulator Rumus</p>
+                        <button class="btn btn-outline-primary" disabled>
+                            <i class="fas fa-clock me-2"></i>Coming Soon
+                        </button>
                     </div>
                 </div>
             </div>
-        
+            
+            <!-- Project 4 -->
             <div class="col-md-3">
-                <div class="card">
-                    <img src="file industri evolusi/40.png" class="card-img-top gambar2" alt="...">
+                <div class="project-card">
+                    <div class="coming-soon-badge">COMING SOON</div>
+                    <img src="file industri evolusi/40.png" class="card-img-top" alt="Pipas Kalkulator">
                     <div class="card-body">
                         <h5 class="card-title">Pipas Kalkulator</h5>
-                        <p class="card-text">COMING SOON - Kalkulator Karbon</p>
-                        <button type="button" class="btn btn-outline-primary">Lihat</button>
+                        <p class="card-text">Kalkulator Karbon</p>
+                        <button class="btn btn-outline-primary" disabled>
+                            <i class="fas fa-clock me-2"></i>Coming Soon
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Baris baru untuk kartu ke-5 dengan margin atas -->
-        <div class="row mt-4 justify-content-center">
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="sundagambar.png" class="card-img-top gambar2" alt="...">
+            
+            <!-- Project 5 -->
+            <div class="col-md-3 mt-4">
+                <div class="project-card">
+                    <img src="sundagambar.png" class="card-img-top" alt="Artikel Sunda">
                     <div class="card-body">
                         <h5 class="card-title">Artikel Sunda</h5>
                         <p class="card-text">Sebuah Artikel Sunda, Tugas.</p>
-                        <a type="button" class="btn btn-outline-primary" href="sundaartikel.html">Lihat</a>
-                        </div>
-                     </div>
+                        <a href="sundaartikel.html" class="btn btn-outline-primary">
+                            <i class="fas fa-eye me-2"></i>Lihat
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
     
 
